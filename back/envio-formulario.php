@@ -26,6 +26,7 @@ if ($result['success'] && $result['score'] >= 0.5) {
     // Datos del formulario
     $name = htmlspecialchars($_POST['name']);
     $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+    $subject = htmlspecialchars($_POST['subject']); // Captura el asunto
     $message = htmlspecialchars($_POST['message']);
 
     if (!$email) {
@@ -35,14 +36,14 @@ if ($result['success'] && $result['score'] >= 0.5) {
 
     // Configuración del correo
     $to = 'contacto@camilolivares.cl';
-    $subject = "Nuevo mensaje de contacto";
-    $body = "Nombre: $name\nEmail: $email\nMensaje:\n$message";
+    $email_subject = "Nuevo mensaje de contacto: " . $subject; // Incluye el asunto en el asunto
+    $body = "Nombre: $name\nEmail: $email\nAsunto: $subject\nMensaje:\n$message"; // Incluye el asunto en el cuerpo
     $headers = "From: $email\r\n" .
                "Reply-To: $email\r\n" .
                "X-Mailer: PHP/" . phpversion();
 
     // Envío del correo
-    if (mail($to, $subject, $body, $headers)) {
+    if (mail($to, $email_subject, $body, $headers)) {
         echo "Mensaje enviado con éxito.";
     } else {
         echo "Error al enviar el mensaje.";
