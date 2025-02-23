@@ -35,7 +35,7 @@ if ($result['success'] && $result['score'] >= 0.5) {
     }
 
     // Configuración del correo
-    $to = 'contacto@camilolivares.cl';
+    $to = 'correo@tudominio.com'; 
     $email_subject = "Nuevo mensaje de contacto: " . $subject; 
     $body = "Nombre: $name\nEmail: $email\nAsunto: $subject\nMensaje:\n$message"; 
     $headers = "From: $email\r\n" .
