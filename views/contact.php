@@ -12,7 +12,7 @@
             <textarea id="message" name="message" required></textarea>
 
             <button class="g-recaptcha"
-                    data-sitekey="6Ld_u78qAAAAAJ66_Io5STZwNarXCtXyv66bUhse"
+                    data-sitekey="CLAVE DE SITIO"
                     data-callback="onSubmit"
                     data-action="submit">Enviar</button>
         </form>
