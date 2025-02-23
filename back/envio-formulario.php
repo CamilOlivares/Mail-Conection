@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 // Verificar reCAPTCHA
-$secretKey = "introduzca su clave secreta";
+$secretKey = "CLAVE SECRETA";
 $token = $_POST['g-recaptcha-response'];
 $url = "https://www.google.com/recaptcha/api/siteverify";
 
@@ -26,7 +26,7 @@ if ($result['success'] && $result['score'] >= 0.5) {
     // Datos del formulario
     $name = htmlspecialchars($_POST['name']);
     $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
-    $subject = htmlspecialchars($_POST['subject']); // Captura el asunto
+    $subject = htmlspecialchars($_POST['subject']); 
     $message = htmlspecialchars($_POST['message']);
 
     if (!$email) {
@@ -36,8 +36,8 @@ if ($result['success'] && $result['score'] >= 0.5) {
 
     // Configuración del correo
     $to = 'contacto@camilolivares.cl';
-    $email_subject = "Nuevo mensaje de contacto: " . $subject; // Incluye el asunto en el asunto
-    $body = "Nombre: $name\nEmail: $email\nAsunto: $subject\nMensaje:\n$message"; // Incluye el asunto en el cuerpo
+    $email_subject = "Nuevo mensaje de contacto: " . $subject; 
+    $body = "Nombre: $name\nEmail: $email\nAsunto: $subject\nMensaje:\n$message"; 
     $headers = "From: $email\r\n" .
                "Reply-To: $email\r\n" .
                "X-Mailer: PHP/" . phpversion();
