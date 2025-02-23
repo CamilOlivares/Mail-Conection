@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 // Verificar reCAPTCHA
-$secretKey = "6Ld_u78qAAAAAEEqplEcEqGGWunWVJCpFUV-RBsC";
+$secretKey = "introduzca su clave secreta";
 $token = $_POST['g-recaptcha-response'];
 $url = "https://www.google.com/recaptcha/api/siteverify";
 
