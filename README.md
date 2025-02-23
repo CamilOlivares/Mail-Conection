@@ -1,1 +1,1 @@
-Configuracion de Formulario de correo para que conecte con el correo que desees en su tu hosting al correo deseado, incluye integracion de recaptcha
+Configuracion de Formulario de correo para que conecte con el correo que desees en su tu hosting al correo deseado, incluye integracion de reCaptcha V3. Previo debes configurar un recaptcha en google para que apunte a tu dominio y obtener la "Clave Secreta" y la "Clave de Sitio". No inclue el CSS, puedes ponerle el que gustes personalizado o usar algunos de los que tengos disponibles en /CSS-Formularios-Contacto
